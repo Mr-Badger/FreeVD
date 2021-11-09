@@ -17,7 +17,9 @@ namespace FreeVD
         MoveWindowToNextDesktop = 2,
         MoveWindowToPreviousDesktop = 3,
         TogglePinWindow = 4,
-        TogglePinApplication = 5
+        TogglePinApplication = 5,
+        GoToNextDesktop = 6,
+        GoToPreviousDesktop = 7
     }
 
     public class VDHotkey : Hotkey
@@ -75,6 +77,12 @@ namespace FreeVD
                         break;
                     case VDAction.TogglePinWindow:
                         window.TogglePinWindow();
+                        break;
+                    case VDAction.GoToNextDesktop:
+                        ;
+                        break;
+                    case VDAction.GoToPreviousDesktop:
+                        ;
                         break;
                     default:
                         throw new NotImplementedException($"Unhandled action: {Action}");
